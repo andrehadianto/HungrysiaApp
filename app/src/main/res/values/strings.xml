@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HungrysiaApp</string>
     <string name="secret_code">Tom</string>
+    <string name="hint">hint: It starts with a capital T.</string>
 </resources>
