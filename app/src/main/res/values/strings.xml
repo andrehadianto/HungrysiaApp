@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HungrysiaApp</string>
+    <string name="secret_code">Tom</string>
 </resources>
