@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/dinnerOrder"
@@ -14,19 +14,20 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_rectangle"
-        app:layout_constraintBottom_toTopOf="@+id/supperOrder"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread">
 
         <ImageButton
             android:id="@+id/dinnerSelect"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/dinner"
-            android:contentDescription="Open dinner menu option" />
+            android:layout_height="342dp"
+            android:background="@drawable/rounded_rectangle"
+            android:contentDescription="Open dinner menu option"
+            android:src="@drawable/dinner" />
 
     </FrameLayout>
 
@@ -36,11 +37,11 @@
         android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_rectangle"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,9 +50,10 @@
         <ImageButton
             android:id="@+id/supperSelect"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/supper"
-            android:contentDescription="Open supper menu option"/>
+            android:layout_height="465dp"
+            android:background="@drawable/rounded_rectangle"
+            android:contentDescription="Open supper menu option"
+            android:src="@drawable/supper" />
 
     </FrameLayout>
 
