@@ -84,8 +84,8 @@ public class ContactActivity extends AppCompatActivity {
                     mEditor.apply();
 
                     Log.i("debugspinner",""+spinner_cohort.getSelectedItemPosition());
-                    Toast.makeText(ContactActivity.this,"goes to dinner/supper",Toast.LENGTH_SHORT).show();
-                    //Intent todinnersupper = new Intent(ContactActivity.this,DinnerSupperActivity.class)
+                    Intent toSelection = new Intent(ContactActivity.this,SelectionActivity.class);
+                    startActivity(toSelection);
                 }
             }
         });

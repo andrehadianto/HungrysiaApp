@@ -39,5 +39,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //CHEAT BUTTONS TO BE REMOVED
+        Button button_contact_cheat = findViewById(R.id.contact_cheat_button);
+        Button button_selection_cheat = findViewById(R.id.selection_cheat_button);
+        Button button_dinner_cheat = findViewById(R.id.dinner_cheat_button);
+        button_contact_cheat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toContact = new Intent(MainActivity.this,ContactActivity.class);
+                startActivity(toContact);
+            }
+        });
+        button_selection_cheat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSelection = new Intent(MainActivity.this,SelectionActivity.class);
+                startActivity(toSelection);
+            }
+        });
+        button_dinner_cheat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toDinner = new Intent(MainActivity.this,DinnerActivity.class);
+                startActivity(toDinner);
+            }
+        });
     }
 }
