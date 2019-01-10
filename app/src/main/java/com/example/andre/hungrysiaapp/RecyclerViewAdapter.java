@@ -1,6 +1,8 @@
 package com.example.andre.hungrysiaapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,17 +23,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(ViewGroup vgroup, int position) {
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_menu_item,viewGroup,false);
+        view = mInflater.inflate(R.layout.cardview_menu_item,vgroup,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.menu_item_thumbnail.setImageResource(mData.get(position).getThumbnail());
-        viewHolder.menu_item_name.setText(mData.get(position).getName());
+    public void onBindViewHolder(ViewHolder vholder, int position) {
+        final MenuItem item = mData.get(position);
+        vholder.item_thumbnail.setImageResource(item.getThumbnail());
+        vholder.item_name.setText(item.getName());
+        vholder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toPopup = new Intent(mContext,PopupActivity.class);
+                toPopup.putExtra("NAME",item.getName());
+                toPopup.putExtra("THUMBNAIL",item.getThumbnail());
+                toPopup.putExtra("PRICE",item.getPrice());
+                mContext.startActivity(toPopup);
+            }
+        });
     }
 
     @Override
@@ -40,13 +53,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView menu_item_thumbnail;
-        TextView menu_item_name;
+        ImageView item_thumbnail;
+        TextView item_name;
+        CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            menu_item_thumbnail = (ImageView) itemView.findViewById(R.id.menu_item_thumbnail);
-            menu_item_name = (TextView) itemView.findViewById(R.id.menu_item_name);
+            item_thumbnail = (ImageView) itemView.findViewById(R.id.menu_item_thumbnail);
+            item_name = (TextView) itemView.findViewById(R.id.menu_item_name);
+            cardView = (CardView) itemView.findViewById(R.id.cardview);
         }
     }
 }
