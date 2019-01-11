@@ -19,7 +19,7 @@
         <activity android:name=".SelectionActivity" />
         <activity android:name=".DinnerActivity" />
         <activity android:name=".PopupActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme.PopUpTheme"/>
     </application>
 
 </manifest>
