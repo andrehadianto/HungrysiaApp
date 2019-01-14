@@ -7,7 +7,7 @@
     android:minHeight="250dp">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/dinner_button"
         android:layout_width="315dp"
         android:layout_height="177dp"
         android:layout_marginStart="36dp"
@@ -23,7 +23,7 @@
         tools:src="@drawable/dinner" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/supper_button"
         android:layout_width="313dp"
         android:layout_height="177dp"
         android:layout_marginStart="36dp"
