@@ -9,17 +9,18 @@
     <TextView
         android:id="@+id/secretcode_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
         android:text="SECRET CODE!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_main" />
 
     <EditText
         android:id="@+id/secretcode_edittext"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:background="@drawable/rounded_rectangle"
         app:backgroundTint="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -69,5 +70,16 @@
         android:text="DINNER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/selection_cheat_button" />
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_main" />
 
 </android.support.constraint.ConstraintLayout>
