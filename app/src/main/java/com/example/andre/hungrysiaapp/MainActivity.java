@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String string_secretcode = edittext_secretcode.getText().toString();
-                if (string_secretcode.equals(getResources().getString(R.string.secret_code))){
+                if (string_secretcode.equals(getResources().getString(R.string.secret_code1)) || string_secretcode.equals(R.string.secret_code2)){
                     Intent toContact = new Intent(MainActivity.this,ContactActivity.class);
                     startActivity(toContact);
                 }
